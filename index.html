@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Viyán Spaces — Architecture &amp; Interiors, Bengaluru</title>
+<meta name="description" content="Viyán Spaces is a Bengaluru architecture and interiors studio designing warm, light-filled homes, workplaces and retail spaces. Residential, commercial, turnkey interiors and 3D visualisation." />
+<meta name="theme-color" content="#F8F5F0" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+<noscript><style>.preloader{display:none !important} body{overflow:auto !important} [data-reveal],.w{opacity:1 !important;transform:none !important;clip-path:none !important} .about__fig::after{display:none !important}</style></noscript>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%23BE5B39'/%3E%3Cpath d='M9 31V18.5a11 11 0 0 1 22 0V31' fill='none' stroke='%23fff' stroke-width='2.4'/%3E%3Cpath d='M16 31V20.5a4 4 0 0 1 8 0V31' fill='none' stroke='%23fff' stroke-width='2.4'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<!-- ============================================================= PRELOADER -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="brandmark brandmark--lg">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <path class="bm-outer" d="M5 35V18a15 15 0 0 1 30 0v17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" />
+        <path class="bm-inner" d="M14 35V21a6 6 0 0 1 12 0v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" />
+      </svg>
+    </div>
+    <div class="preloader__word">Viyán&nbsp;Spaces</div>
+    <div class="preloader__bar"><span id="preBar"></span></div>
+    <div class="preloader__num"><span id="preNum">0</span>%</div>
+  </div>
+</div>
+
+<!-- ============================================================= CURSOR GLOW -->
+<div class="spotlight" id="spotlight" aria-hidden="true"></div>
+
+<!-- ============================================================= TOP BAR -->
+<div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+<!-- ============================================================= HEADER -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="#home" class="brand">
+      <span class="brandmark">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M5 35V18a15 15 0 0 1 30 0v17" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" />
+          <path d="M14 35V21a6 6 0 0 1 12 0v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" />
+        </svg>
+      </span>
+      <span class="brand__text">
+        <strong>Viyán</strong> Spaces
+        <em>Architecture &amp; Interiors</em>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#about" class="nav__link">About</a>
+      <a href="#services" class="nav__link">Services</a>
+      <a href="#process" class="nav__link">Process</a>
+      <a href="#projects" class="nav__link">Projects</a>
+      <a href="#voices" class="nav__link">Clients</a>
+      <a href="#contact" class="nav__link">Contact</a>
+      <span class="nav__pill" id="navPill" aria-hidden="true"></span>
+    </nav>
+
+    <div class="header__actions">
+      <a class="header__phone" href="tel:+919787868550">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="ic"><path d="M6.6 3h3l1.5 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <span>+91 97878 68550</span>
+      </a>
+      <a href="#contact" class="btn btn--sm magnetic">
+        <span>Book a Consultation</span>
+        <svg viewBox="0 0 24 24" class="ic ic--arrow" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================= MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav class="mobile-menu__nav">
+    <a href="#about" style="--i:0">About</a>
+    <a href="#services" style="--i:1">Services</a>
+    <a href="#process" style="--i:2">Process</a>
+    <a href="#projects" style="--i:3">Projects</a>
+    <a href="#why" style="--i:4">Why Us</a>
+    <a href="#voices" style="--i:5">Clients</a>
+    <a href="#contact" style="--i:6">Contact</a>
+  </nav>
+  <div class="mobile-menu__foot" style="--i:7">
+    <a href="tel:+919787868550">+91 97878 68550</a>
+    <a href="https://wa.me/919787868550" target="_blank" rel="noopener">WhatsApp us</a>
+    <p>"Aashirwad", #11, Ground Floor, 6th Cross, III Phase Reliable Residency, HSR Layout-2, Bengaluru 560102</p>
+  </div>
+</div>
+
+<main>
+
+<!-- ============================================================= HERO -->
+<section class="hero" id="home">
+  <div class="hero__media">
+    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2000&q=80" alt="Bright white contemporary architecture with strong geometric volumes" data-parallax="0.16" />
+    <div class="hero__wash"></div>
+  </div>
+
+  <div class="hero__grid-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+  <div class="container hero__content">
+    <p class="eyebrow" data-reveal>
+      <span class="eyebrow__dot"></span>
+      <span class="rotator" id="rotator" data-words='["Residential Architecture","Commercial Interiors","Turnkey Execution","3D Visualisation"]'>
+        Residential Architecture
+      </span>
+    </p>
+
+    <h1 class="hero__title" data-split>We design spaces that feel <em>inevitable</em>.</h1>
+
+    <p class="hero__lead" data-reveal style="--d:120ms">
+      Viyán Spaces is a Bengaluru architecture studio shaping warm, light-filled homes and
+      workplaces — where honest materials, our climate and the way you actually live come first.
+    </p>
+
+    <div class="hero__cta" data-reveal style="--d:220ms">
+      <a href="#projects" class="btn magnetic">
+        <span>View Our Work</span>
+        <svg viewBox="0 0 24 24" class="ic ic--arrow" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#contact" class="btn btn--ghost magnetic"><span>Start a Project</span></a>
+    </div>
+
+    <ul class="hero__facts" data-reveal style="--d:320ms">
+      <li><b class="count" data-to="240">0</b><span>Projects delivered</span></li>
+      <li><b class="count" data-to="12">0</b><span>Years in Bengaluru</span></li>
+      <li><b class="count" data-to="19">0</b><span>Lakh sq.ft designed</span></li>
+    </ul>
+  </div>
+
+  <figure class="hero__card" data-reveal="scale" data-tilt>
+    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Modern white villa with pool and courtyard" data-parallax="0.06" />
+    <figcaption>
+      <span class="tag-row"><span class="tag">Featured</span><span class="tag tag--sample">Sample</span></span>
+      <strong>Nandi Grove Residence</strong>
+      <small>Indiranagar · 4,200 sq.ft · 2024</small>
+    </figcaption>
+  </figure>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll to about">
+    <span class="scroll-cue__line"><i></i></span>
+    <span>Scroll</span>
+  </a>
+</section>
+
+<!-- ============================================================= MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marqueeTrack">
+    <span>Residential Architecture</span><i>✳</i>
+    <span>Turnkey Interiors</span><i>✳</i>
+    <span>Commercial Design</span><i>✳</i>
+    <span>Renovation &amp; Retrofit</span><i>✳</i>
+    <span>3D Visualisation</span><i>✳</i>
+    <span>Space Planning</span><i>✳</i>
+  </div>
+</div>
+
+<!-- ============================================================= ABOUT -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span>About the studio</p>
+      <h2 class="sec-title" data-reveal style="--d:80ms">An architecture practice built on <em>trust, detail</em> and a love of Bengaluru light.</h2>
+    </div>
+
+    <div class="about__grid">
+      <div class="about__media" data-reveal>
+        <div class="about__stack">
+          <figure class="about__fig about__fig--a">
+            <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1200&q=80" alt="White modern villa with clean geometric volumes in bright daylight" loading="lazy" data-parallax="0.07" />
+          </figure>
+          <figure class="about__fig about__fig--b">
+            <img src="https://images.unsplash.com/photo-1616137466211-f939a420be84?auto=format&fit=crop&w=900&q=80" alt="Bright white living room interior with soft daylight" loading="lazy" />
+          </figure>
+        </div>
+        <div class="about__badge" data-reveal="scale" style="--d:300ms">
+          <b>Since 2013</b>
+          <span>HSR Layout, Bengaluru</span>
+        </div>
+      </div>
+
+      <div class="about__copy">
+        <p class="lead" data-reveal>
+          Viyán Spaces began with a simple conviction: a building should feel like it belongs to its
+          place. From a modest studio in HSR Layout-2, we have grown into a full-service design and
+          execution practice working across residential, commercial and institutional projects.
+        </p>
+        <p data-reveal style="--d:90ms">
+          Our team of architects, interior designers and site engineers handles everything from the first
+          site visit to the final styling visit. That single-point accountability means fewer
+          surprises, clearer timelines and a result that matches the drawings you approved.
+        </p>
+
+        <ul class="about__points">
+          <li data-reveal style="--d:60ms"><span>01</span><div><strong>Site-first thinking</strong><p>Sun path, wind, soil and the street corner decide the design — not the other way round.</p></div></li>
+          <li data-reveal style="--d:140ms"><span>02</span><div><strong>One team, end to end</strong><p>Design, 3D views, structural coordination and execution under a single roof.</p></div></li>
+          <li data-reveal style="--d:220ms"><span>03</span><div><strong>Built to be lived in</strong><p>Durable materials, easy maintenance and honest detailing that ages beautifully.</p></div></li>
+        </ul>
+
+        <figure class="quote" data-reveal style="--d:120ms">
+          <blockquote>“A good building is not noticed. It is simply felt — in the morning light on a terrace, in the quiet of a courtyard, in the way a room holds a conversation.”</blockquote>
+          <figcaption><b>Principal Architect</b><span>Viyán Spaces Studio</span></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <ul class="stats" id="stats">
+      <li data-reveal><b class="count" data-to="240">0</b><span>Projects completed</span></li>
+      <li data-reveal style="--d:90ms"><b class="count" data-to="19">0</b><span>Lakh sq.ft built</span></li>
+      <li data-reveal style="--d:180ms"><b class="count" data-to="32">0</b><span>In-house specialists</span></li>
+      <li data-reveal style="--d:270ms"><b class="count" data-to="98" data-suffix="%">0</b><span>Client retention</span></li>
+    </ul>
+    <p class="demo-note demo-note--plain" data-reveal>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 11v5.5M12 7.6v.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span><b>Sample figures</b> — the numbers above and the founder quote are placeholders for this demo, to be replaced with Viyán Spaces' real data.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================= SERVICES -->
+<section class="section section--sand services" id="services">
+  <div class="container">
+    <div class="sec-head sec-head--split">
+      <div>
+        <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span>What we do</p>
+        <h2 class="sec-title" data-reveal style="--d:80ms">Services that cover the <em>whole journey</em>.</h2>
+      </div>
+      <p class="sec-sub" data-reveal style="--d:160ms">
+        Whether you own a bare plot, an old house to reinvent, or a floor to fit out next quarter,
+        the same team guides you from first sketch to final handover.
+      </p>
+    </div>
+
+    <div class="svc-grid">
+      <article class="svc" data-reveal style="--d:0ms" data-tilt>
+        <span class="svc__num">01</span>
+        <span class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M5 27V14l11-8 11 8v13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 27v-8h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </span>
+        <h3>Residential Architecture</h3>
+        <p>Independent houses, villas and apartments designed around family routines, natural light and the character of your plot.</p>
+        <ul class="svc__list">
+          <li>Plot study &amp; feasibility</li><li>Vastu-aligned planning</li><li>Ground + 3D elevations</li><li>Structural &amp; MEP coordination</li>
+        </ul>
+        <span class="svc__go" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </article>
+
+      <article class="svc" data-reveal style="--d:80ms" data-tilt>
+        <span class="svc__num">02</span>
+        <span class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M4 27h24M7 27V9l7-4v22M18 27V13h8v14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 13h1M10 17h1M10 21h1M21 17h1M21 21h1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </span>
+        <h3>Commercial &amp; Workplace</h3>
+        <p>Offices, showrooms, clinics and cafés engineered for footfall, brand storytelling and low running costs.</p>
+        <ul class="svc__list">
+          <li>Space &amp; seat planning</li><li>Brand-aligned interiors</li><li>Fire &amp; services design</li><li>Phased fit-out delivery</li>
+        </ul>
+        <span class="svc__go" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </article>
+
+      <article class="svc" data-reveal style="--d:0ms" data-tilt>
+        <span class="svc__num">03</span>
+        <span class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M6 26h20M9 26V13l7-5 7 5v13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 13l7 5 7-5M13 18v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Renovation &amp; Retrofit</h3>
+        <p>Structural repair, re-planning and full make-overs for ageing homes and commercial shells — without the chaos of a full rebuild.</p>
+        <ul class="svc__list">
+          <li>Structural audit</li><li>Waterproofing &amp; repairs</li><li>Re-planning &amp; additions</li><li>Fast-track execution</li>
+        </ul>
+        <span class="svc__go" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </article>
+
+      <article class="svc" data-reveal style="--d:80ms" data-tilt>
+        <span class="svc__num">04</span>
+        <span class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 27V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 15c-4.5 0-7-2.4-7-6 4.5 0 7 2.4 7 6Zm0 0c4.5 0 7-2.4 7-6-4.5 0-7 2.4-7 6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 27h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </span>
+        <h3>Landscape &amp; Outdoor Spaces</h3>
+        <p>Native, low-water planting, decks, pergolas and courtyards that extend the living space outdoors and soften the built form.</p>
+        <ul class="svc__list">
+          <li>Landscape design</li><li>Pergola &amp; deck detailing</li><li>Native planting plan</li><li>Drip irrigation</li>
+        </ul>
+        <span class="svc__go" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </article>
+
+      <article class="svc" data-reveal style="--d:160ms" data-tilt>
+        <span class="svc__num">05</span>
+        <span class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><rect x="4" y="7" width="24" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 25V13l7-3v15z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>3D Visualisation &amp; Walkthroughs</h3>
+        <p>Photoreal renders, animated walkthroughs and a VR-ready model so you approve the design before a single brick is laid.</p>
+        <ul class="svc__list">
+          <li>Exterior &amp; interior renders</li><li>4K animation films</li><li>VR / AR model walkthrough</li><li>Material boards</li>
+        </ul>
+        <span class="svc__go" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </article>
+
+      <article class="svc" data-reveal style="--d:0ms" data-tilt>
+        <span class="svc__num">06</span>
+        <span class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M8 4h12l4 4v20H8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 14h8M12 19h8M12 24h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </span>
+        <h3>Design Consultation</h3>
+        <p>Not ready to build? Book a paid design consult for layout options, budget guidance and a written direction you can act on.</p>
+        <ul class="svc__list">
+          <li>60-minute studio session</li><li>Two layout options</li><li>Indicative cost band</li><li>Written design brief</li>
+        </ul>
+        <span class="svc__go" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </article>
+
+      <article class="svc svc--feature" data-reveal>
+        <div class="svc__featureText">
+          <span class="tag">Most requested</span>
+          <h3>Interior Architecture &amp; Turnkey Execution</h3>
+          <p>Design, procurement, civil work, carpentry, electrical, polish and styling — delivered by our own site team under one contract and one timeline, so you deal with a single point of accountability from drawing to doorstep.</p>
+          <a href="#contact" class="link-arrow magnetic"><span>Get a turnkey quote</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <ul class="svc__list svc__list--2col">
+          <li>Modular kitchen &amp; wardrobes</li><li>False ceiling &amp; lighting design</li><li>Turnkey civil &amp; painting</li><li>Stone, wood &amp; tile detailing</li>
+          <li>Furniture &amp; soft furnishings</li><li>Move-in ready handover</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= PROCESS -->
+<section class="section process" id="process">
+  <div class="container">
+    <div class="sec-head sec-head--center">
+      <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span>How we work</p>
+      <h2 class="sec-title" data-reveal style="--d:80ms">A clear path from <em>idea</em> to keys.</h2>
+      <p class="sec-sub sec-sub--center" data-reveal style="--d:160ms">Five stages, fixed deliverables, weekly updates. You always know what is happening on your site.</p>
+    </div>
+
+    <ol class="steps" id="steps">
+      <li class="step" data-reveal>
+        <span class="step__dot"><b>1</b></span>
+        <span class="step__meta">Week 1</span>
+        <h3>Discovery &amp; Site Study</h3>
+        <p>Consultation, site measurements, soil and sun analysis, budget alignment and a written brief.</p>
+        <span class="step__out">Deliverable · Design brief</span>
+      </li>
+      <li class="step" data-reveal style="--d:90ms">
+        <span class="step__dot"><b>2</b></span>
+        <span class="step__meta">Week 2–4</span>
+        <h3>Concept &amp; 3D Views</h3>
+        <p>Concept layouts, material palette, 3D renders and walkthrough so you can walk the home before it exists.</p>
+        <span class="step__out">Deliverable · Presentation set</span>
+      </li>
+      <li class="step" data-reveal style="--d:180ms">
+        <span class="step__dot"><b>3</b></span>
+        <span class="step__meta">Week 5–7</span>
+        <h3>Detailed Drawings</h3>
+        <p>Working drawings, structural and MEP coordination, BOQ and a locked specification with cost sign-off.</p>
+        <span class="step__out">Deliverable · GFC drawings &amp; BOQ</span>
+      </li>
+      <li class="step" data-reveal style="--d:270ms">
+        <span class="step__dot"><b>4</b></span>
+        <span class="step__meta">Week 8+</span>
+        <h3>Execution &amp; Site Updates</h3>
+        <p>Execution by our own team with weekly photo reports, quality checks and milestone-linked payments.</p>
+        <span class="step__out">Deliverable · Weekly progress report</span>
+      </li>
+      <li class="step" data-reveal style="--d:360ms">
+        <span class="step__dot"><b>5</b></span>
+        <span class="step__meta">Handover</span>
+        <h3>Handover &amp; Warranty</h3>
+        <p>Snag-free handover, documentation, styling support and a one-year workmanship warranty.</p>
+        <span class="step__out">Deliverable · As-built &amp; warranty</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================= PROJECTS -->
+<section class="section section--sand projects" id="projects">
+  <div class="container">
+    <div class="sec-head sec-head--split">
+      <div>
+        <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span>Selected work</p>
+        <h2 class="sec-title" data-reveal style="--d:80ms">Projects across <em>Bengaluru</em>.</h2>
+      </div>
+      <p class="sec-sub" data-reveal style="--d:160ms">
+        A glimpse of recent residential, commercial and interior work. Every project below was
+        designed and executed by our own studio team.
+      </p>
+    </div>
+
+    <p class="demo-note" data-reveal>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 11v5.5M12 7.6v.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span><b>Sample projects</b> — the ten entries below are demo placeholders using stock photographs, shown to demonstrate the layout. They will be swapped for Viyán Spaces' real portfolio.</span>
+    </p>
+
+    <div class="filters" data-reveal role="tablist" aria-label="Filter projects">
+      <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All work</button>
+      <button class="filter" data-filter="residential" role="tab" aria-selected="false">Residential</button>
+      <button class="filter" data-filter="commercial" role="tab" aria-selected="false">Commercial</button>
+      <button class="filter" data-filter="interiors" role="tab" aria-selected="false">Interiors</button>
+      <button class="filter" data-filter="institutional" role="tab" aria-selected="false">Institutional</button>
+    </div>
+
+    <!-- DEMO CONTENT: replace project names, images and details with Viyán Spaces' real portfolio -->
+    <div class="proj-grid" id="projGrid">
+
+      <article class="proj proj--wide" data-cat="residential" data-reveal data-tilt
+        data-title="Nandi Grove Residence" data-loc="Indiranagar, Bengaluru" data-area="4,200 sq.ft" data-year="2024" data-type="Residential"
+        data-img="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=82"
+        data-desc="A four-bedroom family home arranged around a central courtyard and plunge pool. Double-height living volumes, terracotta jaali screens and a deep cantilevered verandah keep the interiors shaded through the afternoon.">
+        <div class="proj__media"><img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=82" alt="Nandi Grove Residence — modern villa with pool" loading="lazy" /></div>
+        <div class="proj__body">
+          <span class="tag">Residential</span>
+          <h3>Nandi Grove Residence</h3>
+          <p>Indiranagar, Bengaluru · 4,200 sq.ft · 2024</p>
+        </div>
+        <span class="proj__cta">View project <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+
+      <article class="proj" data-cat="commercial" data-reveal style="--d:80ms" data-tilt
+        data-title="Meridian Business Lounge" data-loc="HSR Layout, Bengaluru" data-area="6,800 sq.ft" data-year="2024" data-type="Commercial"
+        data-img="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=82"
+        data-desc="An open-plan workplace for a 140-person technology firm, with a warm material palette, a central social core and a planted terrace used as an all-weather breakout area.">
+        <div class="proj__media"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=82" alt="Meridian Business Lounge — open office interior" loading="lazy" /></div>
+        <div class="proj__body">
+          <span class="tag">Commercial</span>
+          <h3>Meridian Business Lounge</h3>
+          <p>HSR Layout · 6,800 sq.ft · 2024</p>
+        </div>
+        <span class="proj__cta">View project <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+
+      <article class="proj" data-cat="residential" data-reveal style="--d:160ms" data-tilt
+        data-title="Courtyard House" data-loc="Whitefield, Bengaluru" data-area="2,850 sq.ft" data-year="2023" data-type="Residential"
+        data-img="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1400&q=82"
+        data-desc="A compact three-bedroom home on a narrow east-facing plot, planned as a series of nested rooms around an open-to-sky court that brings daylight into the centre of the plan.">
+        <div class="proj__media"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1400&q=82" alt="Courtyard House exterior" loading="lazy" /></div>
+        <div class="proj__body">
+          <span class="tag">Residential</span>
+          <h3>Courtyard House</h3>
+          <p>Whitefield · 2,850 sq.ft · 2023</p>
+        </div>
+        <span class="proj__cta">View project <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+
+      <article class="proj" data-cat="commercial" data-reveal style="--d:0ms" data-tilt
+        data-title="Terra Café &amp; Retail" data-loc="Koramangala, Bengaluru" data-area="1,450 sq.ft" data-year="2023" data-type="Commercial"
+        data-img="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1400&q=82"
+        data-desc="A day-to-evening café with a light-terracotta shell, a long stone counter and a shaded outdoor edge that keeps the seating comfortable through the afternoon heat.">
+        <div class="proj__media"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1400&q=82" alt="Terra Café — warm timber café interior" loading="lazy" /></div>
+        <div class="proj__body">
+          <span class="tag">Commercial</span>
+          <h3>Terra Café &amp; Retail</h3>
+          <p>Koramangala · 1,450 sq.ft · 2023</p>
+        </div>
+        <span class="proj__cta">View project <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+
+      <article class="proj" data-cat="residential" data-reveal style="--d:80ms" data-tilt
+        data-title="The Banyan Apartments" data-loc="Jayanagar, Bengaluru" data-area="3,100 sq.ft" data-year="2024" data-type="Residential"
+        data-img="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1400&q=82"
+        data-desc="A full renovation of a 1980s apartment: new services, warm oak flooring, a reworked kitchen and a living room reoriented to catch the evening light.">
+        <div class="proj__media"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1400&q=82" alt="The Banyan Apartments interior" loading="lazy" /></div>
+        <div class="proj__body">
+          <span class="tag">Residential</span>
+          <h3>The Banyan Apartments</h3>
+          <p>Jayanagar · 3,100 sq.ft · 2024</p>
+        </div>
+        <span class="proj__cta">View project <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+
+      <article class="proj" data-cat="interiors" data-reveal style="--d:160ms" data-tilt
+        data-title="Studio Nine Interiors" data-loc="HSR Layout, Bengaluru" data-area="1,900 sq.ft" data-year="2025" data-type="Interiors"
+        data-img="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=82"
+        data-desc="A turnkey office interior delivered in 68 days — fluted wood panelling, a sculpted reception desk and a lighting scheme tuned for screens and long meetings.">
+        <div class="proj__media"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=82" alt="Studio Nine office interior" loading="lazy" /></div>
+        <div class="proj__body">
+          <span class="tag">Interiors</span>
+          <h3>Studio Nine Interiors</h3>
+          <p>HSR Layout · 1,900 sq.ft · 2025</p>
+        </div>
+        <span class="proj__cta">View project <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+
+      <article class="proj" data-cat="institutional" data-reveal style="--d:0ms" data-tilt
+        data-title="Anand Learning Centre" data-loc="Yelahanka, Bengaluru" data-area="9,500 sq.ft" data-year="2022" data-type="Institutional"
+        data-img="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=1400&q=82"
+        data-desc="A school campus planned as a shaded, naturally ventilated cluster of courtyards — designed to stay comfortable through Bengaluru's summer afternoons without mechanical cooling in the classrooms.">
+        <div class="proj__media"><img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=1400&q=82" alt="Anand Learning Centre — campus buildings against a bright sky" loading="lazy" /></div>
+        <div class="proj__body">
+          <span class="tag">Institutional</span>
+          <h3>Anand Learning Centre</h3>
+          <p>Yelahanka · 9,500 sq.ft · 2022</p>
+        </div>
+        <span class="proj__cta">View project <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+
+      <article class="proj proj--wide" data-cat="residential" data-reveal style="--d:80ms" data-tilt
+        data-title="Lakeview Villa" data-loc="Hebbal, Bengaluru" data-area="5,600 sq.ft" data-year="2023" data-type="Residential"
+        data-img="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=82"
+        data-desc="A villa on a sloped plot overlooking the lake, stepped into the terrain in three levels with a top-floor studio, plunge pool and a stone-clad arrival court.">
+        <div class="proj__media"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=82" alt="Lakeview Villa — modern villa with a mature tree" loading="lazy" /></div>
+        <div class="proj__body">
+          <span class="tag">Residential</span>
+          <h3>Lakeview Villa</h3>
+          <p>Hebbal · 5,600 sq.ft · 2023</p>
+        </div>
+        <span class="proj__cta">View project <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+
+      <article class="proj" data-cat="interiors" data-reveal style="--d:160ms" data-tilt
+        data-title="Canopy Workspace" data-loc="Marathahalli, Bengaluru" data-area="2,400 sq.ft" data-year="2025" data-type="Interiors"
+        data-img="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1400&q=82"
+        data-desc="A boutique studio workspace built inside an existing warehouse shell, adding a freestanding timber 'canopy' of meeting pods and a planted circulation spine.">
+        <div class="proj__media"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1400&q=82" alt="Canopy Workspace — bright open studio interior" loading="lazy" /></div>
+        <div class="proj__body">
+          <span class="tag">Interiors</span>
+          <h3>Canopy Workspace</h3>
+          <p>Marathahalli · 2,400 sq.ft · 2025</p>
+        </div>
+        <span class="proj__cta">View project <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+
+      <article class="proj" data-cat="commercial" data-reveal style="--d:0ms" data-tilt
+        data-title="Sundaram Tech Floor" data-loc="Whitefield, Bengaluru" data-area="5,400 sq.ft" data-year="2025" data-type="Commercial"
+        data-img="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=82"
+        data-desc="A 90-seat technology floor with a bookable focus-room cluster, a shared pantry and a services plan that keeps the ceiling void open and daylight deep into the plan.">
+        <div class="proj__media"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=82" alt="Sundaram Tech Floor — open office with team tables" loading="lazy" /></div>
+        <div class="proj__body">
+          <span class="tag">Commercial</span>
+          <h3>Sundaram Tech Floor</h3>
+          <p>Whitefield · 5,400 sq.ft · 2025</p>
+        </div>
+        <span class="proj__cta">View project <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= WHY US -->
+<section class="section why" id="why">
+  <div class="container">
+    <div class="sec-head sec-head--center">
+      <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span>Why clients stay with us</p>
+      <h2 class="sec-title" data-reveal style="--d:80ms">Built on process, not <em>promises</em>.</h2>
+    </div>
+
+    <div class="bento">
+      <article class="bento__cell bento__cell--hero" data-reveal data-tilt>
+        <span class="bento__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 4l10 5.5v11L16 27 6 20.5v-11z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 11l4.5 2.5v5L16 21l-4.5-2.5v-5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        <h3>Single point of accountability</h3>
+        <p>One studio handles design, drawings, coordination and site execution — so nobody points the finger when something needs fixing.</p>
+        <div class="bento__stat"><b>01</b><span>Contract, one timeline</span></div>
+      </article>
+
+      <article class="bento__cell" data-reveal style="--d:80ms">
+        <span class="bento__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="5" y="6" width="22" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 27h10M16 22v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h3>3D before we build</h3>
+        <p>Photoreal renders and walkthroughs for every room — zero surprises at execution stage.</p>
+      </article>
+
+      <article class="bento__cell" data-reveal style="--d:160ms">
+        <span class="bento__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 9.5V16l4.5 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h3>Timeline discipline</h3>
+        <p>Milestone-linked scheduling and weekly photo reports keep the site accountable.</p>
+      </article>
+
+      <article class="bento__cell" data-reveal style="--d:80ms">
+        <span class="bento__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 5c4 4.5 6.5 8 6.5 11.4A6.5 6.5 0 0 1 9.5 16.4C9.5 13 12 9.5 16 5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 17.5a3 3 0 0 0 3 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h3>Climate-smart design</h3>
+        <p>Shaded openings, cross ventilation and daylight-first planning for Bengaluru's weather.</p>
+      </article>
+
+      <article class="bento__cell" data-reveal style="--d:240ms">
+        <span class="bento__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 4h20v24l-10-6-10 6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M11 12h10M11 17h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h3>Transparent, itemised costing</h3>
+        <p>A detailed BOQ with a brand and specification for every line item — so your budget is a number you can defend.</p>
+        <ul class="bento__list">
+          <li>Milestone-linked payments</li>
+          <li>No hidden "miscellaneous"</li>
+          <li>Change orders in writing</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= TESTIMONIALS -->
+<section class="section section--sand voices" id="voices">
+  <div class="container">
+    <div class="sec-head sec-head--center">
+      <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span>Client voices</p>
+      <h2 class="sec-title" data-reveal style="--d:80ms">Trusted by families and <em>founders</em> across the city.</h2>
+      <p class="demo-note demo-note--center" data-reveal style="--d:120ms">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 11v5.5M12 7.6v.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span><b>Sample testimonials</b> — these quotes are written for the demo. Real client reviews will be added here.</span>
+      </p>
+    </div>
+
+    <div class="slider" data-reveal style="--d:160ms">
+      <svg class="slider__mark" viewBox="0 0 60 40" aria-hidden="true"><path d="M24 4C13 8 6 18 6 27c0 6 4 9 9 9s9-4 9-9-4-9-9-9c-1 0-2 0-3 1 1-5 5-10 12-12zm28 0c-11 4-18 14-18 23 0 6 4 9 9 9s9-4 9-9-4-9-9-9c-1 0-2 0-3 1 1-5 5-10 12-12z" fill="currentColor"/></svg>
+
+      <div class="slider__viewport">
+        <div class="slider__track" id="voiceTrack">
+          <figure class="slide is-active">
+            <blockquote>They took an ordinary plot and turned it into a home that feels like it was designed around us. The 3D walkthrough is what convinced my wife — and the site handover came two days early.</blockquote>
+            <figcaption><b>Raghav &amp; Ananya S.</b><span>Homeowners · Indiranagar</span></figcaption>
+          </figure>
+          <figure class="slide">
+            <blockquote>We had fit out two earlier offices ourselves and the difference was night and day. Weekly photo reports, a fixed timeline and a final space our 140-person team genuinely enjoys working in.</blockquote>
+            <figcaption><b>Priya Nair</b><span>COO, Meridian Tech · HSR Layout</span></figcaption>
+          </figure>
+          <figure class="slide">
+            <blockquote>Our old house was structurally a challenge. Viyán Spaces diagnosed it honestly, showed us three options with costs, and executed the renovation without drama. Fully recommended.</blockquote>
+            <figcaption><b>Suresh &amp; Kavitha M.</b><span>Homeowners · Jayanagar</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="slider__ctrl">
+        <button class="slider__btn" id="voicePrev" aria-label="Previous testimonial">
+          <svg viewBox="0 0 24 24"><path d="M19 12H6m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="slider__dots" id="voiceDots"></div>
+        <button class="slider__btn" id="voiceNext" aria-label="Next testimonial">
+          <svg viewBox="0 0 24 24"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= CONTACT -->
+<section class="section contact" id="contact">
+  <div class="contact__blob" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="contact__grid">
+
+      <div class="contact__info">
+        <p class="eyebrow" data-reveal><span class="eyebrow__dot"></span>Start your project</p>
+        <h2 class="sec-title" data-reveal style="--d:80ms">Tell us about your <em>space</em>.</h2>
+        <p class="sec-sub" data-reveal style="--d:140ms">
+          Send a few details and we will call you back within one working day with a free
+          consultation slot and an honest view of what is possible on your site.
+        </p>
+
+        <ul class="info-cards">
+          <li data-reveal style="--d:60ms">
+            <a href="tel:+919787868550" class="info-card magnetic">
+              <span class="info-card__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 3h3l1.5 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+              <span class="info-card__txt"><small>Call the studio</small><strong>+91 97878 68550</strong></span>
+              <span class="info-card__ar" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li data-reveal style="--d:120ms">
+            <a href="https://wa.me/919787868550" target="_blank" rel="noopener" class="info-card magnetic">
+              <span class="info-card__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.9 7L4 20l1.1-3.9A8 8 0 1 1 20 12Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 10.5c0 2.4 2.1 4.5 4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+              <span class="info-card__txt"><small>WhatsApp</small><strong>Send plans &amp; photos</strong></span>
+              <span class="info-card__ar" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li data-reveal style="--d:180ms">
+            <a href="mailto:hello@viyanspaces.com" class="info-card magnetic">
+              <span class="info-card__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+              <span class="info-card__txt"><small>Email</small><strong>hello@viyanspaces.com</strong></span>
+              <span class="info-card__ar" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li data-reveal style="--d:240ms">
+            <a href="https://www.google.com/maps/search/?api=1&query=Reliable+Residency+HSR+Layout+2+Bengaluru" target="_blank" rel="noopener" class="info-card magnetic">
+              <span class="info-card__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+              <span class="info-card__txt"><small>Studio</small><strong>"Aashirwad", #11, Ground Floor, 6th Cross, III Phase Reliable Residency, HSR Layout-2, opp. Vibgyor School, Bengaluru 560102</strong></span>
+              <span class="info-card__ar" aria-hidden="true">→</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="hours" data-reveal style="--d:300ms">
+          <b>Studio hours</b> Monday – Saturday · 9:30 AM – 7:00 PM &nbsp;·&nbsp; Site visits by appointment
+        </p>
+      </div>
+
+      <div class="contact__form-wrap" data-reveal="scale" style="--d:100ms">
+        <form class="form" id="enquiryForm" novalidate>
+          <h3 class="form__title">Request a free consultation</h3>
+          <p class="form__hint">Fields marked * are required. We reply within one working day.</p>
+
+          <div class="form__row">
+            <div class="field">
+              <input type="text" id="name" name="name" placeholder=" " required autocomplete="name" />
+              <label for="name">Full name *</label>
+              <span class="field__line"></span>
+              <span class="field__err">Please enter your name</span>
+            </div>
+            <div class="field">
+              <input type="tel" id="phone" name="phone" placeholder=" " required autocomplete="tel" inputmode="tel" />
+              <label for="phone">Phone number *</label>
+              <span class="field__line"></span>
+              <span class="field__err">Enter a valid 10-digit number</span>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <input type="email" id="email" name="email" placeholder=" " autocomplete="email" />
+              <label for="email">Email address</label>
+              <span class="field__line"></span>
+              <span class="field__err">Enter a valid email address</span>
+            </div>
+            <div class="field field--select">
+              <select id="service" name="service">
+                <option value="">What do you need?</option>
+                <option>Residential Architecture</option>
+                <option>Commercial &amp; Workplace</option>
+                <option>Interior Architecture / Turnkey</option>
+                <option>Renovation &amp; Retrofit</option>
+                <option>3D Visualisation</option>
+                <option>Design Consultation</option>
+              </select>
+              <label for="service">Service required</label>
+              <span class="field__line"></span>
+              <svg class="field__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+
+          <div class="field">
+            <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+            <label for="message">Tell us about your project *</label>
+            <span class="field__line"></span>
+            <span class="field__err">A few words about your project, please</span>
+          </div>
+
+          <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <button type="submit" class="btn btn--block magnetic" id="submitBtn">
+            <span>Send enquiry</span>
+            <svg viewBox="0 0 24 24" class="ic ic--arrow" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <p class="form__note">By submitting you agree to be contacted about your enquiry. We never share your details.</p>
+        </form>
+
+        <div class="form-success" id="formSuccess" aria-hidden="true">
+          <svg class="form-success__check" viewBox="0 0 52 52" aria-hidden="true">
+            <circle cx="26" cy="26" r="24" fill="none" stroke="currentColor" stroke-width="1.5" />
+            <path d="M15 27l8 8 15-16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <h3>Thank you — enquiry received.</h3>
+          <p>Our team will call you within one working day to schedule your consultation.</p>
+          <button type="button" class="btn btn--ghost" id="resetForm"><span>Send another</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="map" data-reveal>
+      <iframe
+        title="Viyán Spaces studio location — HSR Layout-2, Bengaluru"
+        src="https://www.google.com/maps?q=Reliable%20Residency%2C%20HSR%20Layout%202%2C%20Bengaluru%2C%20Karnataka%20560102&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <div class="map__card">
+        <b>Viyán Spaces Studio</b>
+        <span>"Aashirwad", #11, Ground Floor, 6th Cross, III Phase Reliable Residency, HSR Layout-2, Bengaluru 560102</span>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Reliable+Residency+HSR+Layout+2+Bengaluru" target="_blank" rel="noopener">Get directions →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================= FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="#home" class="brand brand--footer">
+          <span class="brandmark">
+            <svg viewBox="0 0 40 40" aria-hidden="true">
+              <path d="M5 35V18a15 15 0 0 1 30 0v17" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" />
+              <path d="M14 35V21a6 6 0 0 1 12 0v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" />
+            </svg>
+          </span>
+          <span class="brand__text"><strong>Viyán</strong> Spaces<em>Architecture &amp; Interiors</em></span>
+        </a>
+        <p>Designing warm, light-filled homes and workplaces across Bengaluru since 2013.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16.8" cy="7.4" r="1.1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h2.5V5.2c-.4-.1-1.7-.2-3.1-.2-3 0-5 1.8-5 5.1V13H5v3.3h3.4V21h3.4v-4.7h3l.5-3.3h-3.5v-2.3c0-1 .3-1.7 1.7-1.7Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></a>
+          <a href="https://wa.me/919787868550" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.9 7L4 20l1.1-3.9A8 8 0 1 1 20 12Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 10.5c0 2.4 2.1 4.5 4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Reliable+Residency+HSR+Layout+2+Bengaluru" target="_blank" rel="noopener" aria-label="Google Maps"><svg viewBox="0 0 24 24"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Services">
+        <h4>Services</h4>
+        <a href="#services">Residential Architecture</a>
+        <a href="#services">Commercial &amp; Workplace</a>
+        <a href="#services">Interior Architecture</a>
+        <a href="#services">Renovation &amp; Retrofit</a>
+        <a href="#services">3D Visualisation</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Company">
+        <h4>Studio</h4>
+        <a href="#about">About Us</a>
+        <a href="#process">Our Process</a>
+        <a href="#projects">Projects</a>
+        <a href="#voices">Client Voices</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer__col footer__col--contact">
+        <h4>Visit the studio</h4>
+        <p>"Aashirwad", #11, Ground Floor, 6th Cross,<br />III Phase Reliable Residency,<br />HSR Layout-2, Bengaluru 560102</p>
+        <a href="tel:+919787868550">+91 97878 68550</a>
+        <a href="mailto:hello@viyanspaces.com">hello@viyanspaces.com</a>
+        <p class="footer__hours">Mon – Sat · 9:30 AM – 7:00 PM</p>
+      </div>
+    </div>
+
+    <div class="footer__word" aria-hidden="true"></div>
+
+    <div class="footer__bottom">
+      <p>© <span id="year">2026</span> Viyán Spaces — Architecture &amp; Interiors, Bengaluru. All rights reserved.</p>
+      <p class="footer__credit">Concept demo website — project listings, reviews and figures on this page are sample content, not the official Viyán Spaces site.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================= LIGHTBOX -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project details">
+  <button class="lightbox__close" id="lbClose" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Previous project"><svg viewBox="0 0 24 24"><path d="M19 12H6m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Next project"><svg viewBox="0 0 24 24"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="lightbox__inner">
+    <div class="lightbox__media"><img id="lbImg" alt="" /></div>
+    <div class="lightbox__info">
+      <span class="tag" id="lbType"></span>
+      <h3 id="lbTitle"></h3>
+      <ul class="lightbox__facts"><li id="lbLoc"></li><li id="lbArea"></li><li id="lbYear"></li></ul>
+      <p id="lbDesc"></p>
+      <p class="lightbox__note">Sample listing — demo placeholder for this preview.</p>
+      <a href="#contact" class="btn btn--sm magnetic" id="lbCta"><span>Discuss a similar project</span>
+        <svg viewBox="0 0 24 24" class="ic ic--arrow" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================= BACK TO TOP -->
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg class="to-top__ring" viewBox="0 0 44 44" aria-hidden="true">
+    <circle class="to-top__bg" cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".22" />
+    <circle class="to-top__fg" id="toTopRing" cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+  </svg>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V6m0 0-6 6m6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
